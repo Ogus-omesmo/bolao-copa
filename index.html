@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolão da Copa - De Sola</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <h1 class="title">BOLÃO DA COPA - DE SOLA</h1>
+                <p class="subtitle">Bolão da copa de sola · 🔗 Conectar</p>
+            </div>
+            
+            <div class="header-right">
+                <div class="user-selector">
+                    <div class="user-info">
+                        <span class="user-label">Você é</span>
+                        <select id="userSelect" class="user-dropdown">
+                            <option value="certzas">CERTEZAS</option>
+                            <option value="capita">CAPITA</option>
+                            <option value="gil">GIL</option>
+                            <option value="piero">PIERO</option>
+                            <option value="walace">WALACE</option>
+                        </select>
+                        <button class="settings-btn"><i class="fas fa-cog"></i></button>
+                    </div>
+                    <div class="countdown">
+                        <div class="countdown-item">
+                            <span class="countdown-label">FALTAM</span>
+                            <span class="countdown-value" id="days">01</span>
+                            <span class="countdown-unit">DIAS</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="hours">17</span>
+                            <span class="countdown-unit">HORAS</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="minutes">15</span>
+                            <span class="countdown-unit">MIN</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="seconds">46</span>
+                            <span class="countdown-unit">SEG</span>
+                        </div>
+                    </div>
+                    <p class="para-copa">PARA A COPA</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <button class="nav-btn active" data-tab="meus-palpites">
+                <i class="fas fa-pencil-alt"></i> Meus palpites
+            </button>
+            <button class="nav-btn" data-tab="tracker">
+                <i class="fas fa-chart-line"></i> Tracker da Copa
+            </button>
+            <button class="nav-btn" data-tab="classificacao">
+                <i class="fas fa-trophy"></i> Classificação
+            </button>
+            <button class="nav-btn" data-tab="todos-palpites">
+                <i class="fas fa-users"></i> Todos os palpites
+            </button>
+            <button class="nav-btn" data-tab="area-usuario">
+                <i class="fas fa-user-circle"></i> Área do usuário
+            </button>
+        </nav>
+
+        <!-- Colorful Line -->
+        <div class="color-line"></div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Left Section - Classificação -->
+            <section class="left-section">
+                <div class="section-header">
+                    <i class="fas fa-trophy"></i>
+                    <h2>Classificação</h2>
+                    <button class="btn-rules">
+                        <i class="fas fa-info-circle"></i> Regras
+                    </button>
+                </div>
+
+                <div class="classification-list" id="classificationList">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Right Section - Jogos e Palpites -->
+            <section class="right-section">
+                <div class="games-header">
+                    <h3>Palpitando como: <span id="currentUser">CERTEZAS</span></h3>
+                </div>
+
+                <div class="games-tabs">
+                    <button class="games-tab active" data-games-tab="proximos">Próximos jogos</button>
+                    <button class="games-tab" data-games-tab="grupos">Fase de grupos</button>
+                    <button class="games-tab" data-games-tab="mata-mata">Mata-mata</button>
+                    <button class="games-tab" data-games-tab="bonus">Bônus</button>
+                </div>
+
+                <div class="games-content" id="gamesContent">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
